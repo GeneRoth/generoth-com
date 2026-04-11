@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
+  { label: "Stack", href: "#stack" },
 ];
 
 const SERVICES = [
@@ -138,10 +139,10 @@ const PORTFOLIO = [
 ];
 
 const STATS = [
-  { value: "15+", label: "Years Federal Experience" },
-  { value: "6", label: "Live AI Tools" },
-  { value: "7M+", label: "Records Analyzed" },
-  { value: "50+", label: "UCPs Tracked" },
+  { value: "Custom AI Tools", label: "Built & Deployed" },
+  { value: "Compliance Programs", label: "Designed & Operated" },
+  { value: "Data Platforms", label: "Engineered & Launched" },
+  { value: "Strategic Advisory", label: "Government · Industry · Artificial Intelligence" },
 ];
 
 const ABOUT_CARDS = [
@@ -254,8 +255,8 @@ function Hero() {
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
           style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)", color: "#94a3b8", maxWidth: "680px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
-          I don&apos;t just advise on federal compliance — I build the AI tools that automate it.
-          Merging 15+ years of FAA regulatory expertise with hands-on artificial intelligence development.
+          Former FAA Director of Operations, Policy &amp; Compliance. National airport trade association Executive Director.
+          Corporate procurement and sourcing executive. Now building AI tools that sit at the intersection of all three.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -281,9 +282,9 @@ function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}
           style={{ display: "flex", gap: "3rem", justifyContent: "center", marginTop: "4rem", flexWrap: "wrap" as const }}>
           {STATS.map((stat) => (
-            <div key={stat.label} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2rem", fontWeight: 800, color: "#06b6d4", lineHeight: 1 }}>{stat.value}</div>
-              <div style={{ fontSize: "0.75rem", color: "#64748b", marginTop: "4px", letterSpacing: "0.05em" }}>{stat.label}</div>
+            <div key={stat.label} style={{ textAlign: "center", maxWidth: "180px" }}>
+              <div style={{ fontSize: "1rem", fontWeight: 800, color: "#06b6d4", lineHeight: 1.2, marginBottom: "6px" }}>{stat.value}</div>
+              <div style={{ fontSize: "0.7rem", color: "#64748b", letterSpacing: "0.03em", lineHeight: 1.4 }}>{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -313,19 +314,22 @@ function About() {
             and AI execution
           </h2>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-            As the former FAA Director of National External Operations, Policy & Compliance Programs,
-            I spent over a decade collaborating with FAA leadership, national trade associations,
-            and airport authorities to navigate complex regulatory, policy, and operational challenges.
+            I&apos;ve led federal compliance programs from inside the FAA, run a national aviation trade
+            association, managed procurement and supplier diversity at scale for Enterprise Rent-A-Car,
+            and built operational teams at Marriott and Omni Hotels. That&apos;s four industries, four
+            executive roles, and four completely different definitions of what it means to get complex
+            programs to perform.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-            My background spans executive leadership across diverse industries — from serving as
-            Executive Director of a national aviation trade association to leading corporate sourcing
-            for Enterprise Rent-A-Car and operational leadership with Marriott and Omni Hotels.
+            What connects all of it is a commitment to execution over commentary. I&apos;ve never been
+            the person who hands someone a report and walks away. At the FAA I built programs. At the
+            trade association I built coalitions. At Enterprise I built sourcing systems. Now I build
+            AI tools — and the compliance expertise that makes them actually useful comes from having
+            lived inside the problems they&apos;re designed to solve.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8 }}>
-            Today, I differentiate my work by merging high-level strategic perspective with
-            hands-on technical execution. I build the AI tools, compliance dashboards, and data
-            platforms that move work forward — not just advise on them.
+            That combination — deep regulatory knowledge, cross-industry executive experience, and
+            hands-on AI development — is what I bring to every engagement.
           </p>
         </motion.div>
 
@@ -494,6 +498,68 @@ function Portfolio() {
   );
 }
 
+
+// ─── STACK ───────────────────────────────────────────────────────────────────
+
+const STACK = [
+  { category: "// Framework & Language", items: ["Next.js 14 (App Router)", "React 18", "TypeScript", "Tailwind CSS"] },
+  { category: "// Animation & Design", items: ["Framer Motion", "Custom Design System", "Zero templates — every pixel custom", "Lucide React Icons"] },
+  { category: "// AI & Intelligence", items: ["Anthropic Claude API", "RAG Architecture", "LLM Integration", "Built collaboratively with Claude"] },
+  { category: "// Data & Portfolio Tools", items: ["Python · Pandas · Plotly", "Streamlit · Leaflet.js", "NLP · scikit-learn", "BTS Flight Data (7M+ records)"] },
+  { category: "// Deployment & Infrastructure", items: ["Vercel (auto-deploy on commit)", "GitHub version control", "DreamHost (bloody-marys.com)", "SSL · CDN · Global edge network"] },
+  { category: "// Development Approach", items: ["Agentic AI workflow", "Prompt engineering", "Iterative build process", "Human + AI collaboration"] },
+];
+
+function Stack() {
+  return (
+    <section id="stack" style={{ padding: "8rem 2rem", background: "rgba(4,13,26,0.8)", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          style={{ textAlign: "center", marginBottom: "5rem" }}>
+          <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Under the Hood</div>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+            How this site was{" "}
+            <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              built
+            </span>
+          </h2>
+          <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
+            No templates. No page builders. Every component custom-engineered using the same tools I use to build compliance AI — modern frameworks, real code, and Claude as a collaborative development partner.
+          </p>
+        </motion.div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "1.5rem" }}>
+          {STACK.map((block, i) => (
+            <motion.div key={block.category}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              style={{ background: "rgba(4,13,26,0.9)", border: "1px solid rgba(6,182,212,0.12)", borderRadius: "12px", padding: "1.75rem", fontFamily: "'JetBrains Mono', 'Fira Code', monospace" }}>
+              <div style={{ fontSize: "0.75rem", color: "#06b6d4", marginBottom: "1rem", fontWeight: 600 }}>{block.category}</div>
+              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column" as const, gap: "0.6rem" }}>
+                {block.items.map((item) => (
+                  <li key={item} style={{ display: "flex", alignItems: "center", gap: "10px", color: "#e2e8f0", fontSize: "0.85rem" }}>
+                    <span style={{ color: "#06b6d4", fontSize: "0.7rem", flexShrink: 0 }}>&#9658;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          style={{ marginTop: "3rem", padding: "1.5rem 2rem", background: "rgba(6,182,212,0.05)", border: "1px solid rgba(6,182,212,0.15)", borderRadius: "12px", display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" as const }}>
+          <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#06b6d4", flexShrink: 0, boxShadow: "0 0 10px rgba(6,182,212,0.5)" }} />
+          <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>
+            <span style={{ color: "#f1f5f9", fontWeight: 600 }}>Built with Claude. </span>
+            This site was designed and engineered in an agentic AI workflow — architecture, code, content, and deployment all developed collaboratively using Anthropic&apos;s Claude. The same approach I bring to every client engagement.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 // ─── CONTACT ─────────────────────────────────────────────────────────────────
 
 function Contact() {
@@ -572,6 +638,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <Stack />
       <Contact />
       <Footer />
     </main>
