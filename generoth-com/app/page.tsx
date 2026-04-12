@@ -132,7 +132,7 @@ const PORTFOLIO = [
     tech: ["WebGL", "GLSL", "JavaScript", "GPU"],
     color: "#ec4899",
     icon: Cpu,
-    href: "https://splendid-beignet-93e302.netlify.app",
+    href: "https://lovely-pithivier-a966bf.netlify.app/raytracer.html",
     metrics: "GPU-accelerated · Real-time ray tracing",
   },
 ];
