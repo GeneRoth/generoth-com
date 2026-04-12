@@ -103,7 +103,7 @@ const PORTFOLIO = [
     tech: ["Python", "NLP", "Streamlit", "scikit-learn"],
     color: "#10b981",
     icon: Users,
-    href: "https://guileless-pithivier-ee9f68.netlify.app",
+    href: "https://beautiful-pasca-3ed075.netlify.app",
     metrics: "NLP-powered · Carrier-level sentiment analysis",
   },
   {
