@@ -82,7 +82,7 @@ const PORTFOLIO = [
     tech: ["HTML5", "JavaScript", "Leaflet.js", "CSS3"],
     color: "#06b6d4",
     icon: Shield,
-    href: "https://lovely-pithivier-a966bf.netlify.app",
+    href: "https://recertdashboard.netlify.app",
     metrics: "50+ UCPs tracked · Real-time IFR compliance status",
   },
   {
