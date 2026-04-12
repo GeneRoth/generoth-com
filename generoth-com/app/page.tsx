@@ -113,7 +113,7 @@ const PORTFOLIO = [
     tech: ["RAG", "LLM", "Vector DB", "Python"],
     color: "#f59e0b",
     icon: FileText,
-    href: "https://jade-fenglisu-63690b.netlify.app",
+    href: "https://dbe-narrative-builder.netlify.app",
     metrics: "RAG-powered · Compliance-aware generation",
   },
   {
