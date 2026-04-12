@@ -123,7 +123,7 @@ const PORTFOLIO = [
     tech: ["Python", "APIs", "Streamlit", "Plotly"],
     color: "#ef4444",
     icon: Zap,
-    href: "https://enviro-intelligence.streamlit.app",
+    href: "https://enviro-intelligence-platform.netlify.app",
     metrics: "Real-time monitoring · Automated risk scoring",
   },
   {
