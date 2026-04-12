@@ -89,7 +89,7 @@ const PORTFOLIO = [
   {
     id: "02",
     title: "U.S. Airport Operational Performance",
-    description: "Built on 7 million BTS flight records from 140 hub airports. Explore on-time performance by carrier, airport, and hub category — the same data FAA and airlines use to measure operational health.",
+    description: "Operationalized 7 million BTS flight records across 140 hub airports into a sub-second performance intelligence platform. The same data FAA and airlines use to make operational decisions — now deployable for any stakeholder in under 2 seconds.",
     tech: ["Python", "Streamlit", "Pandas", "Plotly"],
     color: "#8b5cf6",
     icon: Globe,
@@ -99,7 +99,7 @@ const PORTFOLIO = [
   {
     id: "03",
     title: "Airline Passenger Experience Intelligence",
-    description: "AI-powered platform surfacing patterns in airline service quality and passenger satisfaction. Filter by carrier and explore what the data actually shows beneath the headline numbers.",
+    description: "Architected an NLP-powered intelligence platform that surfaces carrier-level service degradation signals across DOT complaint data. Designed to inform regulatory intervention decisions, not just visualize trends.",
     tech: ["Python", "NLP", "Streamlit", "scikit-learn"],
     color: "#10b981",
     icon: Users,
@@ -109,47 +109,47 @@ const PORTFOLIO = [
   {
     id: "04",
     title: "DBE/ACDBE Narrative Builder",
-    description: "An AI-assisted tool that helps firms structure and draft compliant DBE/ACDBE program narratives. Guides users through the certification storytelling process using RAG architecture.",
+    description: "Orchestrated a RAG-adjacent LLM pipeline that interviews certification candidates and generates submission-ready Personal Narratives. Deterministic guardrails enforce DBE/ACDBE regulatory standards on every output — compliance architecture, not prompt tricks.",
     tech: ["RAG", "LLM", "Vector DB", "Python"],
     color: "#f59e0b",
     icon: FileText,
     href: "https://dbe-narrative-builder.netlify.app",
-    metrics: "RAG-powered · Compliance-aware generation",
+    metrics: "RAG-adjacent · Deterministic output layer · Compliance-governed generation",
   },
   {
     id: "05",
     title: "Environmental Intelligence Platform",
-    description: "Real-time environmental compliance monitoring and risk assessment for aviation operations. Tracks regulatory exposure and generates automated compliance briefs.",
-    tech: ["Python", "APIs", "Streamlit", "Plotly"],
+    description: "Deployed a multi-source real-time intelligence platform orchestrating live weather, air quality, and news sentiment APIs across global cities. Claude-powered cross-city briefings generated via agentic workflow — zero cold-start, sub-2-second load.",
+    tech: ["Python", "APIs", "Claude AI", "Plotly"],
     color: "#ef4444",
     icon: Zap,
     href: "https://enviro-intelligence-platform.netlify.app",
-    metrics: "Real-time monitoring · Automated risk scoring",
+    metrics: "Multi-API orchestration · Agentic AI briefings · Real-time edge deployment",
   },
   {
     id: "06",
     title: "GPU Path Tracer",
-    description: "High-performance GPU-accelerated path tracing engine demonstrating advanced computational capabilities and systems-level programming expertise.",
-    tech: ["WebGL", "GLSL", "JavaScript", "GPU"],
+    description: "Architected a WebGL2 path tracing engine executing physically-based rendering entirely on the GPU via custom GLSL shaders. Cook-Torrance BRDF, Monte Carlo sampling, and progressive accumulation — every pixel earned through simulation, not rasterization shortcuts.",
+    tech: ["WebGL2", "GLSL", "JavaScript", "GPU"],
     color: "#ec4899",
     icon: Cpu,
     href: "https://lovely-pithivier-a966bf.netlify.app/raytracer.html",
-    metrics: "GPU-accelerated · Real-time ray tracing",
+    metrics: "GPU-accelerated · Physically-based rendering · Zero-dependency deployment",
   },
 ];
 
 const STATS = [
-  { value: "Custom AI Tools", label: "Built & Deployed" },
-  { value: "Compliance Programs", label: "Designed & Operated" },
-  { value: "Data Platforms", label: "Engineered & Launched" },
-  { value: "Strategic Advisory", label: "Government · Industry · Artificial Intelligence" },
+  { value: "3,200+", label: "FAA Node Infrastructure Governed" },
+  { value: "$9B", label: "Supply Chain Architected" },
+  { value: "6", label: "AI Tools in Production" },
+  { value: "4", label: "Industries · Executive Roles · One Stack" },
 ];
 
 const ABOUT_CARDS = [
-  { icon: Shield, title: "Federal Regulatory Expertise", desc: "FAA, DOT, FTA, DBE/ACDBE, Title VI, ADA/Section 504" },
-  { icon: Brain, title: "AI Development", desc: "RAG systems, LLM integration, agentic workflows, custom compliance tools" },
-  { icon: BarChart3, title: "Data Engineering", desc: "7M+ record datasets, real-time dashboards, NLP-powered analytics" },
-  { icon: Database, title: "SaaS Architecture", desc: "Full-stack compliance platforms built for scale and reliability" },
+  { icon: Shield, title: "Regulatory System Architecture", desc: "DBE/ACDBE · Title VI · ADA — governing national compliance infrastructure at 3,200+ node scale" },
+  { icon: Brain, title: "AI Stack Orchestration", desc: "RAG pipelines · LLM inference · Agentic workflows · Deterministic guardrails" },
+  { icon: BarChart3, title: "Intelligence Platform Engineering", desc: "7M+ record pipelines · Real-time dashboards · NLP-powered analytics at scale" },
+  { icon: Database, title: "Production-Grade Deployment", desc: "Cloud-native CI/CD · GitHub → Netlify · Zero-trust API layer · Zero cold-start" },
 ];
 
 // ─── NAV ─────────────────────────────────────────────────────────────────────
@@ -240,7 +240,7 @@ function Hero() {
           }}>
           <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06b6d4" }} />
           <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4" }}>
-            Former FAA Director · AI Builder · Compliance Strategist
+            National-Scale Operational Architect · AI Implementation Lead
           </span>
         </motion.div>
 
@@ -255,8 +255,7 @@ function Hero() {
 
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
           style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)", color: "#94a3b8", maxWidth: "680px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
-          Former FAA Director of Operations, Policy &amp; Compliance. National airport trade association Executive Director.
-          Corporate procurement and sourcing executive. Now building AI tools that sit at the intersection of all three.
+          I architect systems that perform under national-level pressure. From governing a 3,200+ node FAA infrastructure to managing a $9B global supply chain, my work has been defined by orchestrating complex logic at enterprise scale. Now I bridge the gap between executive strategy and rapid AI implementation — deploying deterministic, production-grade AI stacks for high-stakes regulated environments.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -279,6 +278,11 @@ function Hero() {
           </motion.a>
         </motion.div>
 
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
+          style={{ marginTop: "1.5rem", fontSize: "0.72rem", color: "#475569", letterSpacing: "0.08em", textAlign: "center" as const }}>
+          Specializing in RAG-adjacent architectures · Agentic orchestration · API-driven deployment · Compliance guardrails for AI systems
+        </motion.div>
+
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}
           style={{ display: "flex", gap: "3rem", justifyContent: "center", marginTop: "4rem", flexWrap: "wrap" as const }}>
           {STATS.map((stat) => (
@@ -287,6 +291,22 @@ function Hero() {
               <div style={{ fontSize: "0.7rem", color: "#64748b", letterSpacing: "0.03em", lineHeight: 1.4 }}>{stat.label}</div>
             </div>
           ))}
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7 }}
+          style={{ marginTop: "2.5rem", display: "flex", justifyContent: "center" }}>
+          <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+            style={{
+              background: "rgba(6,182,212,0.08)", color: "#06b6d4",
+              padding: "0.65rem 1.75rem", borderRadius: "100px",
+              textDecoration: "none", fontWeight: 600, fontSize: "0.82rem",
+              border: "1px solid rgba(6,182,212,0.25)",
+              display: "flex", alignItems: "center", gap: "8px",
+              letterSpacing: "0.04em",
+            }}>
+            <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06b6d4", display: "inline-block" }} />
+            Let&apos;s work together →
+          </motion.a>
         </motion.div>
       </motion.div>
 
@@ -314,22 +334,20 @@ function About() {
             and AI execution
           </h2>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-            I&apos;ve led federal compliance programs from inside the FAA, run a national aviation trade
-            association, managed procurement and supplier diversity at scale for Enterprise Rent-A-Car,
-            and built operational teams at Marriott and Omni Hotels. That&apos;s four industries, four
-            executive roles, and four completely different definitions of what it means to get complex
-            programs to perform.
+            Excellence at scale is not a goal — it is a technical requirement. I directed the operational and regulatory
+            frameworks for the U.S. national airport system, governing a 3,200+ node distributed infrastructure and
+            managing a $9B supply chain across four industries. This wasn&apos;t compliance administration; it was the
+            engineering of a massive, decentralized operational architecture under sustained federal oversight.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-            What connects all of it is a commitment to execution over commentary. I&apos;ve never been
-            the person who hands someone a report and walks away. At the FAA I built programs. At the
-            trade association I built coalitions. At Enterprise I built sourcing systems. Now I build
-            AI tools — and the compliance expertise that makes them actually useful comes from having
-            lived inside the problems they&apos;re designed to solve.
+            Today I apply that same architectural precision to AI implementation. I don&apos;t just use LLMs — I
+            orchestrate agentic workflows and RAG-adjacent architectures that close the Implementation Gap for
+            federal contractors and enterprise operations. I am the General Contractor for AI transformation:
+            I design the system, select the stack, embed the deterministic guardrails, and ensure the deployment
+            is production-ready.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8 }}>
-            That combination — deep regulatory knowledge, cross-industry executive experience, and
-            hands-on AI development — is what I bring to every engagement.
+            I don&apos;t hand someone a strategy deck and walk away. I build the system that executes it.
           </p>
         </motion.div>
 
@@ -383,8 +401,7 @@ function Services() {
             </span>
           </h2>
           <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
-            Four integrated practice areas — each informed by real federal experience
-            and executed with production-grade AI and data engineering.
+            Four integrated practice areas — each grounded in national-scale operational authority and executed with production-grade AI orchestration.
           </p>
         </motion.div>
 
@@ -440,8 +457,7 @@ function Portfolio() {
             in production
           </h2>
           <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
-            Not mockups. Not demos. Real tools built on real data, solving real compliance
-            and operational problems in aviation and government.
+            Not mockups. Not demos. Production AI tools — each solving a real compliance or operational problem in federally regulated aviation, built with the same precision required at national infrastructure scale.
           </p>
         </motion.div>
 
@@ -503,11 +519,11 @@ function Portfolio() {
 
 const STACK = [
   { category: "// Framework & Language", items: ["Next.js 14 (App Router)", "React 18", "TypeScript", "Tailwind CSS"] },
-  { category: "// Animation & Design", items: ["Framer Motion", "Custom Design System", "Zero templates — every pixel custom", "Lucide React Icons"] },
-  { category: "// AI & Intelligence", items: ["Anthropic Claude API", "RAG Architecture", "LLM Integration", "Built collaboratively with Claude"] },
-  { category: "// Data & Portfolio Tools", items: ["Python · Pandas · Plotly", "Streamlit · Leaflet.js", "NLP · scikit-learn", "BTS Flight Data (7M+ records)"] },
-  { category: "// Deployment & Infrastructure", items: ["Vercel (auto-deploy on commit)", "GitHub version control", "DreamHost (bloody-marys.com)", "SSL · CDN · Global edge network"] },
-  { category: "// Development Approach", items: ["Agentic AI workflow", "Prompt engineering", "Iterative build process", "Human + AI collaboration"] },
+  { category: "// Animation & Design", items: ["Framer Motion", "Custom Design System", "Zero templates — every pixel orchestrated", "Lucide React Icons"] },
+  { category: "// AI & Intelligence", items: ["Anthropic Claude API", "RAG-adjacent Architecture", "LLM Inference Pipeline", "Orchestrated via Claude API"] },
+  { category: "// Data & Portfolio Tools", items: ["Python · Pandas · Plotly", "Vector-ready data pipelines", "NLP · scikit-learn", "BTS Flight Data (7M+ records)"] },
+  { category: "// Deployment & Infrastructure", items: ["Vercel (auto-deploy on commit)", "GitHub CI/CD version control", "Zero-trust API layer (serverless)", "SSL · CDN · Global edge network"] },
+  { category: "// Development Approach", items: ["Agentic AI workflow", "Architect-directed AI execution", "Rapid agentic implementation", "Production-grade from day one"] },
 ];
 
 function Stack() {
@@ -524,7 +540,7 @@ function Stack() {
             </span>
           </h2>
           <p style={{ color: "#94a3b8", maxWidth: "600px", margin: "0 auto", lineHeight: 1.7 }}>
-            No templates. No page builders. Every component custom-engineered using the same tools I use to build compliance AI — modern frameworks, real code, and Claude as a collaborative development partner.
+            No templates. No page builders. Every component orchestrated from first principles — the same stack architecture deployed for enterprise clients, with Claude as the implementation engine.
           </p>
         </motion.div>
 
@@ -551,8 +567,10 @@ function Stack() {
           style={{ marginTop: "3rem", padding: "1.5rem 2rem", background: "rgba(6,182,212,0.05)", border: "1px solid rgba(6,182,212,0.15)", borderRadius: "12px", display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" as const }}>
           <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#06b6d4", flexShrink: 0, boxShadow: "0 0 10px rgba(6,182,212,0.5)" }} />
           <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>
-            <span style={{ color: "#f1f5f9", fontWeight: 600 }}>Built with Claude. </span>
-            This site was designed and engineered in an agentic AI workflow — architecture, code, content, and deployment all developed collaboratively using Anthropic&apos;s Claude. The same approach I bring to every client engagement.
+            <span style={{ color: "#f1f5f9", fontWeight: 600 }}>Strategically orchestrated with Claude. </span>
+            This site was architected in an agentic AI workflow — architecture decisions, code generation, content strategy,
+            and deployment all coordinated using Anthropic&apos;s Claude as the implementation engine.
+            The same orchestration model I bring to every client engagement.
           </p>
         </motion.div>
       </div>
@@ -579,8 +597,8 @@ function Contact() {
             </span>
           </h2>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "3rem", fontSize: "1.05rem" }}>
-            Whether you need compliance advisory, AI tool development, or a strategic
-            partner who understands both federal regulations and modern technology — let&apos;s talk.
+            If you&apos;re deploying AI into regulated environments, scaling a compliance operation, or need an architect
+            who has operated at both federal and enterprise scale — this is the conversation to have.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" as const }}>
             <motion.a href="mailto:gene@generoth.com" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
