@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Governance", href: "#governance" },
   { label: "Contact", href: "#contact" },
   { label: "Stack", href: "#stack" },
 ];
@@ -21,15 +22,15 @@ const NAV_LINKS = [
 const SERVICES = [
   {
     icon: Shield,
-    category: "Advisory & Consulting",
+    category: "AI Governance & Compliance Architecture",
     color: "#06b6d4",
     items: [
+      "AI Governance Framework Design",
+      "Responsible AI Architecture Review",
       "DBE/ACDBE Program Advisory",
-      "Strategic Narrative Development",
-      "Qualifying Factor Identification",
-      "Recertification & Growth Strategy",
       "Title VI Compliance Programs",
       "ADA / Section 504 Accessibility & Equity",
+      "Algorithmic Fairness Auditing",
       "Regulatory Program Design & Monitoring",
       "Civil Rights Compliance Operations",
     ],
@@ -43,7 +44,7 @@ const SERVICES = [
       "DBE/ACDBE Narrative Builder (RAG)",
       "Certification Deadline Monitor",
       "IFR Recertification Rate Tracker",
-      "Grant Reporting Tracker",
+      "Structured Output Validation Layer",
       "Regulatory Change Detection Agent",
     ],
   },
@@ -344,7 +345,9 @@ function About() {
             orchestrate agentic workflows and RAG-adjacent architectures that close the Implementation Gap for
             federal contractors and enterprise operations. I am the General Contractor for AI transformation:
             I design the system, select the stack, embed the deterministic guardrails, and ensure the deployment
-            is production-ready.
+            is production-ready. Every system I deploy is architected with governance-by-design principles —
+            explainability, audit-readiness, and deterministic output constraints built in from the first commit,
+            not retrofitted after deployment.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8 }}>
             I don&apos;t hand someone a strategy deck and walk away. I build the system that executes it.
@@ -515,6 +518,107 @@ function Portfolio() {
 }
 
 
+// ─── GOVERNANCE ─────────────────────────────────────────────────────────
+
+const GOVERNANCE_PRINCIPLES = [
+  {
+    title: "Deterministic Guardrails",
+    body: "The same discipline applied to federal grant compliance — where a single error carries legal consequence — is now embedded as deterministic output constraints in every AI system I deploy. Governance isn’t a feature added at the end. It’s an architectural requirement from the first commit.",
+    tag: "Risk Architecture",
+  },
+  {
+    title: "Explainability by Design (XAI)",
+    body: "Every system I architect produces outputs that can be traced, audited, and explained. Not because regulations require it, but because systems that cannot explain themselves cannot be trusted in regulated environments. Explainability is a structural property, not a dashboard.",
+    tag: "System Transparency",
+  },
+  {
+    title: "RAG-Adjacent Architectures for Regulated Domains",
+    body: "I architect systems that ground AI outputs in authoritative, domain-specific source data — federal regulations, compliance frameworks, operational SOPs. The result is AI that operates within defined evidentiary boundaries, not probabilistic guesswork.",
+    tag: "Data Stewardship",
+  },
+  {
+    title: "Credential Isolation & Zero-Trust API Design",
+    body: "Every production AI system I deploy isolates credentials server-side via serverless proxy architecture. No client-side exposure. This mirrors the security posture required in federal data environments and is a non-negotiable constraint in every stack I build.",
+    tag: "Security Architecture",
+  },
+  {
+    title: "Audit-Ready Deployment",
+    body: "Systems architected for federal-grade oversight are built differently than systems optimized for demos. CI/CD pipelines, structured output validation, and deterministic logic chains ensure that every deployment can withstand the same scrutiny I applied to national aviation compliance programs.",
+    tag: "Operational Governance",
+  },
+];
+
+function Governance() {
+  return (
+    <section id="governance" style={{
+      padding: "8rem 2rem",
+      background: "rgba(7,20,40,0.5)",
+      borderTop: "1px solid rgba(255,255,255,0.06)",
+      borderBottom: "1px solid rgba(255,255,255,0.06)",
+    }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          style={{ textAlign: "center", marginBottom: "5rem" }}>
+          <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Governance Architecture</div>
+          <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+            Responsible AI is an{" "}
+            <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              engineering requirement
+            </span>
+          </h2>
+          <p style={{ color: "#94a3b8", maxWidth: "640px", margin: "0 auto", lineHeight: 1.7 }}>
+            My federal compliance background isn’t a credential. It’s the technical foundation for how I architect AI.
+            DBE/ACDBE, Title VI, and ADA frameworks required systems that were auditable, equitable, and defensible under federal review.
+            That standard is now the baseline for every AI system I build.
+          </p>
+        </motion.div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+          {GOVERNANCE_PRINCIPLES.map((p, i) => (
+            <motion.div key={p.title}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -4 }}
+              style={{
+                padding: "2rem", borderRadius: "14px",
+                border: "1px solid rgba(6,182,212,0.12)",
+                background: "rgba(4,13,26,0.7)",
+                transition: "all 0.3s ease",
+                position: "relative" as const,
+              }}>
+              <div style={{
+                position: "absolute" as const, top: 0, left: 0,
+                width: "3px", height: "100%", borderRadius: "14px 0 0 14px",
+                background: "linear-gradient(180deg, #06b6d4, #0891b240)",
+              }} />
+              <div style={{
+                display: "inline-block", fontSize: "0.65rem", fontWeight: 700,
+                letterSpacing: "0.12em", textTransform: "uppercase" as const,
+                color: "#06b6d4", marginBottom: "0.75rem",
+                padding: "0.25rem 0.75rem",
+                background: "rgba(6,182,212,0.08)",
+                border: "1px solid rgba(6,182,212,0.2)",
+                borderRadius: "100px",
+              }}>{p.tag}</div>
+              <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#f1f5f9", marginBottom: "0.75rem", lineHeight: 1.3 }}>{p.title}</h3>
+              <p style={{ fontSize: "0.85rem", color: "#94a3b8", lineHeight: 1.7, margin: 0 }}>{p.body}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          style={{ marginTop: "3rem", padding: "1.5rem 2rem", background: "rgba(6,182,212,0.04)", border: "1px solid rgba(6,182,212,0.12)", borderRadius: "12px" }}>
+          <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.7, margin: 0, textAlign: "center" as const }}>
+            <span style={{ color: "#f1f5f9", fontWeight: 600 }}>The standard I apply: </span>
+            If a system cannot survive a federal audit, it is not production-ready. Every architecture decision —
+            credential isolation, structured output validation, deterministic logic constraints, explainable inference chains —
+            is made with that standard as the baseline.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 // ─── STACK ───────────────────────────────────────────────────────────────────
 
 const STACK = [
@@ -656,6 +760,7 @@ export default function Home() {
       <About />
       <Services />
       <Portfolio />
+      <Governance />
       <Stack />
       <Contact />
       <Footer />
