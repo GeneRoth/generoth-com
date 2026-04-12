@@ -82,7 +82,7 @@ const PORTFOLIO = [
     tech: ["HTML5", "JavaScript", "Leaflet.js", "CSS3"],
     color: "#06b6d4",
     icon: Shield,
-    href: "#",
+    href: "https://lovely-pithivier-a966bf.netlify.app",
     metrics: "50+ UCPs tracked · Real-time IFR compliance status",
   },
   {
@@ -92,7 +92,7 @@ const PORTFOLIO = [
     tech: ["Python", "Streamlit", "Pandas", "Plotly"],
     color: "#8b5cf6",
     icon: Globe,
-    href: "#",
+    href: "https://zippy-bavarois-98956a.netlify.app",
     metrics: "7M+ flight records · 140 hub airports · Sub-second queries",
   },
   {
@@ -102,7 +102,7 @@ const PORTFOLIO = [
     tech: ["Python", "NLP", "Streamlit", "scikit-learn"],
     color: "#10b981",
     icon: Users,
-    href: "#",
+    href: "https://beautiful-pasca-3ed075.netlify.app",
     metrics: "NLP-powered · Carrier-level sentiment analysis",
   },
   {
@@ -112,7 +112,7 @@ const PORTFOLIO = [
     tech: ["RAG", "LLM", "Vector DB", "Python"],
     color: "#f59e0b",
     icon: FileText,
-    href: "#",
+    href: "https://dbe-narrative-builder.netlify.app",
     metrics: "RAG-powered · Compliance-aware generation",
   },
   {
@@ -122,7 +122,7 @@ const PORTFOLIO = [
     tech: ["Python", "APIs", "Streamlit", "Plotly"],
     color: "#ef4444",
     icon: Zap,
-    href: "#",
+    href: "https://enviro-intelligence-platform.netlify.app",
     metrics: "Real-time monitoring · Automated risk scoring",
   },
   {
@@ -132,7 +132,7 @@ const PORTFOLIO = [
     tech: ["WebGL", "GLSL", "JavaScript", "GPU"],
     color: "#ec4899",
     icon: Cpu,
-    href: "#",
+    href: "https://splendid-beignet-93e302.netlify.app",
     metrics: "GPU-accelerated · Real-time ray tracing",
   },
 ];
@@ -561,7 +561,7 @@ function Portfolio() {
                     }}>{t}</span>
                   ))}
                 </div>
-                <motion.a href={project.href} whileHover={{ x: 4 }}
+                <motion.a href={project.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 4 }}
                   style={{ display: "flex", alignItems: "center", gap: "6px", color: project.color, textDecoration: "none", fontSize: "0.8rem", fontWeight: 600, transition: "all 0.2s" }}>
                   View Live Project <ExternalLink size={13} />
                 </motion.a>
