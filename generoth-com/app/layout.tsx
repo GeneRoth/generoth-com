@@ -9,14 +9,23 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Gene Roth | Strategic Leadership Meets Technical Execution",
   description: "Former FAA Director. AI builder. Compliance strategist. Gene Roth merges deep federal regulatory expertise with hands-on artificial intelligence development.",
-  keywords: ["Gene Roth", "FAA", "DBE", "ACDBE", "compliance", "AI", "airport consulting"],
+  keywords: ["Gene Roth", "FAA", "DBE", "ACDBE", "compliance", "AI", "airport consulting", "federal compliance", "aviation"],
   authors: [{ name: "Gene Roth" }],
+  metadataBase: new URL("https://generoth.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Gene Roth | Strategic Leadership Meets Technical Execution",
     description: "Former FAA Director building AI-powered compliance tools.",
     url: "https://generoth.com",
     siteName: "GeneRoth.com",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gene Roth | Strategic Leadership Meets Technical Execution",
+    description: "Former FAA Director. AI builder. Compliance strategist.",
   },
 };
 
