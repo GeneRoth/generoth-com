@@ -28,7 +28,7 @@ const SERVICES = [
       "Qualifying Factor Identification",
       "Recertification & Growth Strategy",
       "Title VI Compliance Programs",
-      "ADA / Section 504 Accessibility & Equity",
+      "ADA / Section 504 Accessibility",
       "Regulatory Program Design & Monitoring",
       "Civil Rights Compliance Operations",
     ],
@@ -78,7 +78,7 @@ const PORTFOLIO = [
   {
     id: "01",
     title: "DBE/ACDBE IFR Recertification Dashboard",
-    description: "Interactive compliance tracker monitoring recertification rates across state DOTs and UCPs following the FAA Interim Final Rule. Features filterable tables, status badges, map visualization, and editable rows.",
+    description: "Interactive compliance tracker monitoring recertification rates across state DOTs and UCPs following the FAA Interim Final Rule. Features filterable tables, status badges, map visualization, and editable rows. ⚠️ Demo Data Only — figures are fictional and do not reflect actual UCP or state DOT recertification rates.",
     tech: ["HTML5", "JavaScript", "Leaflet.js", "CSS3"],
     color: "#06b6d4",
     icon: Shield,
@@ -138,14 +138,14 @@ const PORTFOLIO = [
 ];
 
 const STATS = [
-  { value: "15+", label: "Years Federal Experience" },
+  { value: "15", label: "Years Federal Experience" },
   { value: "6", label: "Live AI Tools" },
   { value: "7M+", label: "Records Analyzed" },
-  { value: "50+", label: "UCPs Tracked" },
+  { value: "4", label: "Practice Areas" },
 ];
 
 const ABOUT_CARDS = [
-  { icon: Shield, title: "Federal Regulatory Expertise", desc: "FAA, DOT, FTA, DBE/ACDBE, Title VI, ADA/Section 504" },
+  { icon: Shield, title: "Federal Regulatory Expertise", desc: "FAA, DOT, DBE/ACDBE, Title VI, ADA/Section 504" },
   { icon: Brain, title: "AI Development", desc: "RAG systems, LLM integration, agentic workflows, custom compliance tools" },
   { icon: BarChart3, title: "Data Engineering", desc: "7M+ record datasets, real-time dashboards, NLP-powered analytics" },
   { icon: Database, title: "SaaS Architecture", desc: "Full-stack compliance platforms built for scale and reliability" },
@@ -311,7 +311,7 @@ function Hero() {
           }}>
           <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#06b6d4", flexShrink: 0 }} />
           <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#06b6d4", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-            Former FAA Director · AI Builder · Compliance Strategist
+            Federal Regulatory Expert · AI Builder · Compliance Strategist
           </span>
         </motion.div>
 
@@ -327,7 +327,7 @@ function Hero() {
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
           style={{ fontSize: "clamp(0.95rem, 2vw, 1.25rem)", color: "#94a3b8", maxWidth: "680px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
           I don&apos;t just advise on federal compliance — I build the AI tools that automate it.
-          Merging 15+ years of FAA regulatory expertise with hands-on artificial intelligence development.
+          Merging 15+ years of federal regulatory expertise with hands-on artificial intelligence development.
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
@@ -388,8 +388,8 @@ function About() {
           </h2>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem", fontSize: "clamp(0.875rem, 2vw, 1rem)" }}>
             As the former FAA Director of National External Operations, Policy & Compliance Programs,
-            I spent over a decade collaborating with FAA leadership, national trade associations,
-            and airport authorities to navigate complex regulatory, policy, and operational challenges.
+            I spent over a decade collaborating with FAA and DOT leadership, national trade associations,
+            airport authorities, and other stakeholders to navigate complex regulatory, policy, and operational challenges.
           </p>
           <p style={{ color: "#94a3b8", lineHeight: 1.8, marginBottom: "1.5rem", fontSize: "clamp(0.875rem, 2vw, 1rem)" }}>
             My background spans executive leadership across diverse industries — from serving as
