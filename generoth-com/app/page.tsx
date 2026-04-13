@@ -31,6 +31,8 @@ const SERVICES = [
       "ADA / Section 504 Accessibility",
       "Regulatory Program Design & Monitoring",
       "Civil Rights Compliance Operations",
+      "Fractional Chief of Staff Services",
+      "Program Launch & Implementation Support",
     ],
   },
   {
