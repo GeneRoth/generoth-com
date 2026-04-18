@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import {
   ChevronDown, ExternalLink, Mail, Link2,
   Shield, Brain, BarChart3, Database, Code2,
-  ArrowRight, Cpu, Globe, FileText, Zap, Users, Menu, X
+  ArrowRight, Cpu, Globe, FileText, Zap, Users, Menu, X, MapPin
 } from "lucide-react";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
@@ -136,11 +136,21 @@ const PORTFOLIO = [
     href: "https://lovely-pithivier-a966bf.netlify.app/raytracer.html",
     metrics: "GPU-accelerated · Real-time ray tracing",
   },
+  {
+    id: "07",
+    title: "MARTA Transit Intelligence",
+    description: "Real-time Atlanta transit dashboard ingesting live GTFS-RT bus positions (protobuf-decoded), MARTA Rail API arrivals, and static feed route shapes. Features paratransit equity modeling against ACS census data and an AI-generated network narrative.",
+    tech: ["MapLibre GL", "Netlify Functions", "GTFS-RT", "Protocol Buffers"],
+    color: "#ffb81c",
+    icon: MapPin,
+    href: "https://marta-p7.netlify.app",
+    metrics: "118 routes · 38 stations · 30s live refresh · Equity model",
+  },
 ];
 
 const STATS = [
   { value: "15", label: "Years Federal Experience" },
-  { value: "6", label: "Live AI Tools" },
+  { value: "7", label: "Live AI Tools" },
   { value: "7M+", label: "Records Analyzed" },
   { value: "4", label: "Practice Areas" },
 ];
@@ -510,7 +520,7 @@ function Portfolio() {
           style={{ textAlign: "center", marginBottom: "4rem" }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Portfolio</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
-            Six{" "}
+            Seven{" "}
             <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               live AI tools
             </span>{" "}
