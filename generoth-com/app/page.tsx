@@ -139,12 +139,12 @@ const PORTFOLIO = [
   {
     id: "07",
     title: "MARTA Transit Intelligence",
-    description: "Real-time Atlanta transit dashboard ingesting live GTFS-RT bus positions (protobuf-decoded), MARTA Rail API arrivals, and static feed route shapes. Features paratransit equity modeling against ACS census data and an AI-generated network narrative.",
+    description: "Real-time Atlanta transit dashboard built on MARTA's NextGen Bus Network (launched April 18, 2026). Live GTFS-RT bus positions, MARTA Rail API arrivals, static route shapes, ACS-driven paratransit equity analysis, and AI-generated network narrative.",
     tech: ["MapLibre GL", "Netlify Functions", "GTFS-RT", "Protocol Buffers"],
     color: "#ffb81c",
     icon: MapPin,
     href: "https://marta-p7.netlify.app",
-    metrics: "118 routes · 38 stations · 30s live refresh · Equity model",
+    metrics: "81 routes · 12 Reach zones · 38 stations · 30s live refresh · Equity mode",
   },
 ];
 
