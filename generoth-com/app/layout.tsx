@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Gene Roth | Strategic Leadership Meets Technical Execution",
-    description: "Former FAA Director building AI-powered compliance tools.",
+    description: "Former FAA Director building AI-powered compliance tools. 15+ years of federal regulatory expertise paired with seven live tools in production.",
     url: "https://generoth.com",
     siteName: "GeneRoth.com",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gene Roth | Strategic Leadership Meets Technical Execution",
-    description: "Former FAA Director. AI builder. Compliance strategist.",
+    description: "Former FAA Director. AI builder. Compliance strategist. 15+ years of federal regulatory expertise paired with seven live AI tools in production.",
     images: ["/opengraph-image"],
   },
   robots: {
