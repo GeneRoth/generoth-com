@@ -21,11 +21,32 @@ export const metadata: Metadata = {
     url: "https://generoth.com",
     siteName: "GeneRoth.com",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Gene Roth — Federal Regulatory Expert, AI Builder, Compliance Strategist",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gene Roth | Strategic Leadership Meets Technical Execution",
     description: "Former FAA Director. AI builder. Compliance strategist.",
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
