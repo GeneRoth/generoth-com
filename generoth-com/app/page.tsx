@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import {
   ChevronDown, ExternalLink, Mail, Link2,
   Shield, Brain, BarChart3, Database, Code2,
-  ArrowRight, Cpu, Globe, FileText, Zap, Users, Menu, X, MapPin
+  ArrowRight, Cpu, Globe, FileText, Zap, Users, Menu, X, MapPin, Scale
 } from "lucide-react";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
@@ -146,11 +146,21 @@ const PORTFOLIO = [
     href: "https://marta-p7.netlify.app",
     metrics: "81 routes · 12 Reach zones · 38 stations · 30s live refresh · Equity mode",
   },
+  {
+    id: "08",
+    title: "Metro Atlanta Transit Equity & Access Tracker",
+    description: "An independent civic analysis of transit equity and accessibility across Metro Atlanta's four operators — MARTA, CobbLinc, Ride Gwinnett, and Xpress. Joins 2020–2024 ACS demographics with weekday GTFS service data to map how transit availability aligns with concentrated poverty, minority share, and limited English proficiency. Uses FTA Title VI and ADA paratransit standards as analytical benchmarks. Documents MARTA's machine-readability gap as a transparency finding.",
+    tech: ["Observable Framework", "Python", "GeoPandas", "Observable Plot", "Claude Opus 4.7", "Claude Sonnet 4.6", "GPT-5.5 Pro"],
+    color: "#4f46e5",
+    icon: Scale,
+    href: "https://metro-atlanta-equity-tracker.netlify.app",
+    metrics: "1,224 census tracts · 4 operators · 2020–2024 ACS · Polygon-overlap walkshed methodology",
+  },
 ];
 
 const STATS = [
   { value: "15", label: "Years Federal Experience" },
-  { value: "7", label: "Live AI Tools" },
+  { value: "8", label: "Live AI Tools" },
   { value: "7M+", label: "Records Analyzed" },
   { value: "4", label: "Practice Areas" },
 ];
@@ -520,7 +530,7 @@ function Portfolio() {
           style={{ textAlign: "center", marginBottom: "4rem" }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Portfolio</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
-            Seven{" "}
+            Eight{" "}
             <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
               live AI tools
             </span>{" "}
