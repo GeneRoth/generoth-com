@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
@@ -203,14 +204,15 @@ function Nav() {
         }}
       >
         {/* Logo */}
-        <motion.a href="#home" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }} whileHover={{ scale: 1.02 }}>
-          <div style={{
-            width: "36px", height: "36px", borderRadius: "8px",
-            background: "linear-gradient(135deg, #06b6d4, #0891b2)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontWeight: 800, fontSize: "0.85rem", color: "#040d1a", flexShrink: 0,
-          }}>GR</div>
-          <span style={{ fontWeight: 700, fontSize: "1rem", color: "#f1f5f9" }}>Gene Roth</span>
+        <motion.a href="#home" aria-label="Gene Roth Advisory home" style={{ display: "flex", alignItems: "center", textDecoration: "none" }} whileHover={{ scale: 1.02 }}>
+          <Image
+            src="/brand/logo-header-white.svg"
+            alt="Gene Roth Advisory, LLC"
+            width={310}
+            height={58}
+            priority
+            style={{ height: "40px", width: "auto" }}
+          />
         </motion.a>
 
         {/* Desktop links */}
@@ -648,17 +650,38 @@ function Contact() {
 function Footer() {
   return (
     <footer style={{
-      padding: "2rem 1.5rem", borderTop: "1px solid rgba(255,255,255,0.06)",
-      display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" as const, gap: "1rem",
+      padding: "2.5rem 1.5rem 2rem",
+      borderTop: "1px solid rgba(255,255,255,0.06)",
     }}>
-      <div style={{ color: "#64748b", fontSize: "0.8rem" }}>© {new Date().getFullYear()} Gene Roth. All rights reserved.</div>
-      <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" as const }}>
-        {["About", "Services", "Portfolio", "Contact"].map((item) => (
-          <a key={item} href={`#${item.toLowerCase()}`}
-            style={{ color: "#64748b", textDecoration: "none", fontSize: "0.8rem" }}>{item}</a>
-        ))}
+      <div style={{
+        maxWidth: "1200px", margin: "0 auto",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+        flexWrap: "wrap" as const, gap: "1.5rem", marginBottom: "1.5rem",
+      }}>
+        <Image
+          src="/brand/logo-header-white.svg"
+          alt="Gene Roth Advisory, LLC"
+          width={310}
+          height={58}
+          style={{ height: "32px", width: "auto" }}
+        />
+        <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" as const }}>
+          {["About", "Services", "Portfolio", "Contact"].map((item) => (
+            <a key={item} href={`#${item.toLowerCase()}`}
+              style={{ color: "#64748b", textDecoration: "none", fontSize: "0.8rem" }}>{item}</a>
+          ))}
+        </div>
+        <div style={{ color: "#64748b", fontSize: "0.75rem" }}>Built with Next.js · Deployed on Vercel</div>
       </div>
-      <div style={{ color: "#64748b", fontSize: "0.75rem" }}>Built with Next.js · Deployed on Vercel</div>
+      <div style={{
+        maxWidth: "1200px", margin: "0 auto",
+        borderTop: "1px solid rgba(255,255,255,0.04)", paddingTop: "1.25rem",
+      }}>
+        <div style={{ color: "#475569", fontSize: "0.75rem", lineHeight: 1.6 }}>
+          <p>© {new Date().getFullYear()} Gene Roth Advisory, LLC. All rights reserved.</p>
+          <p>Gene Roth Advisory, LLC is a Georgia limited liability company.</p>
+        </div>
+      </div>
     </footer>
   );
 }

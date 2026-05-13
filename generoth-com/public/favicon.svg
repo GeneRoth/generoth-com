@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="146" viewBox="0 0 146 146" role="img" aria-labelledby="title desc">
+  <title id="title">Gene Roth Advisory monogram</title>
+  <desc id="desc">A navy rounded-square monogram with a blue diagonal precision line ending in a circular node, with the letters G R in white.</desc>
+  <style>
+    .font { font-family: Inter, Lato, "Open Sans", Arial, sans-serif; }
+  </style>
+  <rect x="0" y="0" width="146" height="146" rx="24" fill="#0B1220"/>
+  <path d="M24 116 L116 24" stroke="#38BDF8" stroke-width="5" opacity="0.78" stroke-linecap="round"/>
+  <circle cx="117" cy="27" r="6" fill="#38BDF8"/>
+  <text x="73" y="94" class="font" text-anchor="middle" font-size="60" font-weight="900" fill="#FFFFFF" letter-spacing="-4">GR</text>
+</svg>

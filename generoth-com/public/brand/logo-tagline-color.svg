@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="80" viewBox="0 0 360 80" role="img" aria-labelledby="title desc">
+  <title id="title">Gene Roth Advisory logo with tagline</title>
+  <desc id="desc">A navy rounded-square GR monogram with a blue precision line, paired with the Gene Roth Advisory wordmark and the tagline Federal Expertise dot AI Execution.</desc>
+  <style>
+    .font { font-family: Inter, Lato, "Open Sans", Arial, sans-serif; }
+  </style>
+
+  <g transform="translate(0,4) scale(0.4931506849315068)">
+    <rect x="0" y="0" width="146" height="146" rx="24" fill="#0B1220"/>
+    <path d="M24 116 L116 24" stroke="#38BDF8" stroke-width="5" opacity="0.78" stroke-linecap="round"/>
+    <circle cx="117" cy="27" r="6" fill="#38BDF8"/>
+    <text x="73" y="94" class="font" text-anchor="middle" font-size="60" font-weight="900" fill="#FFFFFF" letter-spacing="-4">GR</text>
+  </g>
+
+  <g transform="translate(92,0)">
+    <text x="0" y="29" class="font" font-size="26" font-weight="900" fill="#111827" letter-spacing="-0.5">Gene Roth</text>
+    <text x="0" y="54" class="font" font-size="18" font-weight="700" fill="#0EA5E9" letter-spacing="1.7">ADVISORY</text>
+    <text x="0" y="73" class="font" font-size="10" font-weight="600" fill="#64748B" letter-spacing="1.4">FEDERAL EXPERTISE  ·  AI EXECUTION</text>
+  </g>
+</svg>

@@ -7,35 +7,45 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Gene Roth | Strategic Leadership Meets Technical Execution",
-  description: "Federal regulatory expert. AI builder. Compliance strategist. Gene Roth merges deep federal regulatory expertise with hands-on artificial intelligence development.",
-  keywords: ["Gene Roth", "FAA", "DBE", "ACDBE", "compliance", "AI", "airport consulting", "federal compliance", "aviation"],
-  authors: [{ name: "Gene Roth" }],
   metadataBase: new URL("https://generoth.com"),
-  alternates: {
-    canonical: "/",
+  title: {
+    default: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
+    template: "%s | Gene Roth Advisory, LLC",
   },
+  description: "AI-assisted regulatory compliance advisory for airports, prospective DBEs and ACDBEs, and engineering consultants. Founded by the former FAA Director of National External Operations, Compliance, and Policy.",
+  keywords: ["DBE", "ACDBE", "49 CFR Part 26", "49 CFR Part 23", "Title VI", "ADA", "Section 504", "FAA", "airport compliance", "AI compliance", "regulatory advisory"],
+  authors: [{ name: "Gene Roth" }],
+  creator: "Gene Roth Advisory, LLC",
+  publisher: "Gene Roth Advisory, LLC",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
-    title: "Gene Roth | Strategic Leadership Meets Technical Execution",
-    description: "Federal regulatory expert building AI-powered compliance tools. 15+ years of federal regulatory expertise paired with seven live tools in production.",
-    url: "https://generoth.com",
-    siteName: "GeneRoth.com",
     type: "website",
     locale: "en_US",
+    url: "https://generoth.com",
+    siteName: "Gene Roth Advisory, LLC",
+    title: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
+    description: "AI-assisted regulatory compliance advisory for airports, prospective DBEs and ACDBEs, and engineering consultants.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image-1200x630.png",
         width: 1200,
         height: 630,
-        alt: "Gene Roth — Federal Regulatory Expert, AI Builder, Compliance Strategist",
+        alt: "Gene Roth Advisory, LLC",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gene Roth | Strategic Leadership Meets Technical Execution",
-    description: "Federal regulatory expert. AI builder. Compliance strategist. 15+ years of federal regulatory expertise paired with seven live AI tools in production.",
-    images: ["/opengraph-image"],
+    title: "Gene Roth Advisory, LLC",
+    description: "Federal Expertise · AI Execution",
+    images: ["/og-image-1200x630.png"],
   },
   robots: {
     index: true,
