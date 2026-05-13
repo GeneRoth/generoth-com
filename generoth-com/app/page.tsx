@@ -25,6 +25,7 @@ const SERVICES = [
     color: "#06b6d4",
     items: [
       "Fractional Chief of Staff Services",
+      "Business Development",
       "DBE/ACDBE Program Advisory",
       "Strategic Narrative Development",
       "Recertification & Growth Strategy",
