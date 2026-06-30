@@ -79,16 +79,6 @@ const SERVICES = [
 
 const PORTFOLIO = [
   {
-    id: "01",
-    title: "DBE/ACDBE IFR Recertification Dashboard",
-    description: "Interactive compliance tracker monitoring recertification rates across state DOTs and UCPs following the FAA Interim Final Rule. Features filterable tables, status badges, map visualization, and editable rows. ⚠️ Demo Data Only — figures are fictional and do not reflect actual UCP or state DOT recertification rates.",
-    tech: ["HTML5", "JavaScript", "Leaflet.js", "CSS3"],
-    color: "#06b6d4",
-    icon: Shield,
-    href: "https://splendid-beignet-93e302.netlify.app",
-    metrics: "50+ UCPs tracked · Real-time IFR compliance status",
-  },
-  {
     id: "02",
     title: "U.S. Airport Operational Performance",
     description: "Built on 7 million BTS flight records from 140 hub airports. Explore on-time performance by carrier, airport, and hub category — the same data FAA and airlines use to measure operational health.",
@@ -157,6 +147,16 @@ const PORTFOLIO = [
     icon: Scale,
     href: "https://metro-atlanta-equity-tracker.netlify.app",
     metrics: "1,224 census tracts · 4 operators · 2020–2024 ACS · Polygon-overlap walkshed methodology",
+  },
+  {
+    id: "01",
+    title: "DBE/ACDBE IFR Recertification Dashboard",
+    description: "Interactive compliance tracker monitoring recertification rates across state DOTs and UCPs following the FAA Interim Final Rule. Features filterable tables, status badges, map visualization, and editable rows. ⚠️ Demo Data Only — figures are fictional and do not reflect actual UCP or state DOT recertification rates.",
+    tech: ["HTML5", "JavaScript", "Leaflet.js", "CSS3"],
+    color: "#06b6d4",
+    icon: Shield,
+    href: "https://splendid-beignet-93e302.netlify.app",
+    metrics: "50+ UCPs tracked · Real-time IFR compliance status",
   },
 ];
 
@@ -363,12 +363,17 @@ function Hero() {
           </span>
         </div>
 
+        <p className="hero-fade hero-fade-1b"
+          style={{ fontSize: "clamp(0.85rem, 1.6vw, 1rem)", color: "#94a3b8", fontWeight: 500, marginBottom: "1.25rem", letterSpacing: "0.01em" }}>
+          For airports, DBEs/ACDBEs, and engineering consultants.
+        </p>
+
         <h1 className="hero-fade hero-fade-2"
           style={{ fontSize: "clamp(2.2rem, 6vw, 5rem)", fontWeight: 800, lineHeight: 1.1, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
-          <span style={{ color: "#f1f5f9" }}>Strategic Leadership</span>
+          <span style={{ color: "#f1f5f9" }}>Federal Compliance Expertise, Plus the</span>
           <br />
           <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            Meets Technical Execution
+            AI That Automates It
           </span>
         </h1>
 
@@ -396,7 +401,7 @@ function Hero() {
               border: "1px solid rgba(255,255,255,0.15)", transition: "all 0.2s",
               width: "100%", maxWidth: "280px", justifyContent: "center", display: "flex", alignItems: "center",
             }}>
-            Work Together
+            Book a Compliance Strategy Call
           </motion.a>
         </div>
 
@@ -420,6 +425,7 @@ function Hero() {
           animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
         }
         .hero-fade-1 { animation-delay: 0s; }
+        .hero-fade-1b { animation-delay: 0.05s; }
         .hero-fade-2 { animation-delay: 0.1s; }
         .hero-fade-3 { animation-delay: 0.2s; }
         .hero-fade-4 { animation-delay: 0.3s; }
