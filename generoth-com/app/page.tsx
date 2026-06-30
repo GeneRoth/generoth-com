@@ -326,7 +326,13 @@ function Hero() {
       }} />
 
       <motion.div style={{ y, opacity, textAlign: "center", padding: "6rem 1.5rem 2rem", maxWidth: "900px", position: "relative", zIndex: 1, width: "100%" }}>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+        {/*
+          Above-the-fold content uses a pure CSS keyframe fade-in (see <style> below)
+          instead of Framer Motion's initial/animate. The resting state is opacity:1,
+          so this content is GUARANTEED visible even if JS/hydration never runs — the
+          animation only plays it in; it can never leave it stuck invisible.
+        */}
+        <div className="hero-fade hero-fade-1"
           style={{
             display: "inline-flex", alignItems: "center", gap: "8px",
             background: "rgba(6,182,212,0.08)", border: "1px solid rgba(6,182,212,0.2)",
@@ -337,24 +343,24 @@ function Hero() {
           <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#06b6d4", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             Federal Regulatory Expert · AI Builder · Compliance Strategist
           </span>
-        </motion.div>
+        </div>
 
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
+        <h1 className="hero-fade hero-fade-2"
           style={{ fontSize: "clamp(2.2rem, 6vw, 5rem)", fontWeight: 800, lineHeight: 1.1, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
           <span style={{ color: "#f1f5f9" }}>Strategic Leadership</span>
           <br />
           <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             Meets Technical Execution
           </span>
-        </motion.h1>
+        </h1>
 
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
+        <p className="hero-fade hero-fade-3"
           style={{ fontSize: "clamp(0.95rem, 2vw, 1.25rem)", color: "#94a3b8", maxWidth: "680px", margin: "0 auto 2.5rem", lineHeight: 1.7 }}>
           I don&apos;t just advise on federal compliance — I build the AI tools that automate it.
           Merging 15+ years of federal regulatory expertise with hands-on artificial intelligence development.
-        </motion.p>
+        </p>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
+        <div className="hero-fade hero-fade-4"
           style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" as const, padding: "0 1rem" }}>
           <motion.a href="#portfolio" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             style={{
@@ -374,9 +380,9 @@ function Hero() {
             }}>
             Work Together
           </motion.a>
-        </motion.div>
+        </div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5 }}
+        <div className="hero-fade hero-fade-5"
           style={{ display: "flex", gap: "2rem", justifyContent: "center", marginTop: "4rem", flexWrap: "wrap" as const }}>
           {STATS.map((stat) => (
             <div key={stat.label} style={{ textAlign: "center", minWidth: "80px" }}>
@@ -384,8 +390,30 @@ function Hero() {
               <div style={{ fontSize: "0.7rem", color: "#64748b", marginTop: "4px", letterSpacing: "0.05em" }}>{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
+
+      <style>{`
+        /* Guaranteed-visible fade-in for above-the-fold hero content.
+           Base state is fully visible; the animation only plays it in.
+           No JS dependency — if CSS animations are unavailable or the
+           keyframes never run, content simply shows at full opacity. */
+        .hero-fade {
+          animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .hero-fade-1 { animation-delay: 0s; }
+        .hero-fade-2 { animation-delay: 0.1s; }
+        .hero-fade-3 { animation-delay: 0.2s; }
+        .hero-fade-4 { animation-delay: 0.3s; }
+        .hero-fade-5 { animation-delay: 0.5s; }
+        @keyframes heroFadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-fade { animation: none; }
+        }
+      `}</style>
 
       <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
         style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", color: "#64748b" }}>
