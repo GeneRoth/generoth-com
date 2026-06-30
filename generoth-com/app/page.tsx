@@ -190,10 +190,14 @@ function Nav() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
+      {/*
+        Nav uses a pure CSS keyframe slide/fade-in (see <style> below) instead of
+        Framer Motion's initial/animate. The resting state is opacity:1, so the nav
+        is GUARANTEED visible even if JS/hydration never runs — the animation only
+        plays it in; it can never leave the nav stuck invisible.
+      */}
+      <nav
+        className="nav-fade"
         style={{
           position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
           padding: "0 1.25rem", height: "64px",
@@ -246,7 +250,7 @@ function Nav() {
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-      </motion.nav>
+      </nav>
 
       {/* Mobile drawer */}
       <AnimatePresence>
@@ -288,6 +292,20 @@ function Nav() {
       </AnimatePresence>
 
       <style>{`
+        /* Guaranteed-visible slide/fade-in for the nav bar.
+           Base state is fully visible; the animation only plays it in.
+           No JS dependency — if CSS animations are unavailable or the
+           keyframes never run, the nav simply shows at full opacity. */
+        .nav-fade {
+          animation: navFadeDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes navFadeDown {
+          from { opacity: 0; transform: translateY(-100px); }
+          to   { opacity: 1; transform: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .nav-fade { animation: none; }
+        }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-nav-toggle { display: flex !important; }
