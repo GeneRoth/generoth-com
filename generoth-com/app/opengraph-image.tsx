@@ -13,7 +13,7 @@ import { ImageResponse } from "next/og";
 // --- Required exports per Next.js metadata file convention ----------------
 export const runtime = "edge";
 export const alt =
-  "Gene Roth — Federal Regulatory Expert, AI Builder, Compliance Strategist";
+  "Gene Roth Advisory, LLC — Federal Compliance Expertise, Plus the AI That Automates It";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -104,7 +104,7 @@ export default async function Image() {
               display: "flex",
             }}
           >
-            Strategic Leadership Meets Technical Execution
+            Federal Compliance Expertise, Plus the AI That Automates It
           </div>
 
           <div
@@ -155,7 +155,7 @@ export default async function Image() {
               letterSpacing: 1,
             }}
           >
-            Gene Roth
+            Gene Roth Advisory, LLC
           </div>
         </div>
       </div>
