@@ -370,7 +370,7 @@ function Hero() {
 
         <h1 className="hero-fade hero-fade-2"
           style={{ fontSize: "clamp(2.2rem, 6vw, 5rem)", fontWeight: 800, lineHeight: 1.1, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
-          <span style={{ color: "#f1f5f9" }}>Federal Compliance Expertise, Plus the</span>
+          <span style={{ color: "#f1f5f9" }}>Federal Compliance Expertise, Plus the</span>{" "}
           <br />
           <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             AI That Automates It

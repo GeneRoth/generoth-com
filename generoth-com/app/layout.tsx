@@ -11,11 +11,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://generoth.com"),
+  alternates: { canonical: "https://generoth.com/" },
   title: {
     default: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
     template: "%s | Gene Roth Advisory, LLC",
   },
-  description: "AI-assisted regulatory compliance advisory for airports, prospective DBEs and ACDBEs, and engineering consultants. Founded by the former FAA Director of National External Operations, Compliance, and Policy.",
+  description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
   keywords: ["DBE", "ACDBE", "49 CFR Part 26", "49 CFR Part 23", "Title VI", "ADA", "Section 504", "FAA", "airport compliance", "AI compliance", "regulatory advisory"],
   authors: [{ name: "Gene Roth" }],
   creator: "Gene Roth Advisory, LLC",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://generoth.com",
     siteName: "Gene Roth Advisory, LLC",
     title: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
-    description: "AI-assisted regulatory compliance advisory for airports, prospective DBEs and ACDBEs, and engineering consultants.",
+    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
     images: [
       {
         url: "/og-image-1200x630.png",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Gene Roth Advisory, LLC",
-    description: "Federal Expertise · AI Execution",
+    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
     images: ["/og-image-1200x630.png"],
   },
   robots: {
