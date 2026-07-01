@@ -1,0 +1,26 @@
+# Gene Roth Advisory, LLC
+
+> AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.
+
+## What we do
+
+- Advisory & Consulting — fractional chief of staff, business development, DBE/ACDBE program advisory, Title VI and ADA / Section 504 compliance programs, and regulatory program design.
+- AI-Powered Compliance Tools — compliance audit agents, a RAG-based DBE/ACDBE narrative builder, certification deadline and IFR recertification tracking, and regulatory change detection.
+- Data & Analytics — airport operational performance, airline passenger experience, environmental compliance, and certification-rate analytics built on federal datasets (7M+ BTS flight records).
+- AI & Technology Services — custom compliance SaaS, agentic AI workflow design, RAG system architecture, and LLM integration.
+
+## Key expertise
+
+- DBE certification
+- ACDBE certification
+- 49 CFR Part 26
+- 49 CFR Part 23
+- Title VI compliance
+- ADA / Section 504 accessibility
+- FAA airport compliance
+- AI compliance tools
+- RAG systems
+
+## Contact
+
+gene@generoth.com · https://linkedin.com/in/generoth
