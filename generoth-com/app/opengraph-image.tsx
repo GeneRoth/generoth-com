@@ -118,7 +118,7 @@ export default async function Image() {
             }}
           >
             15+ years of federal regulatory expertise, paired with hands-on AI
-            development. Seven live tools in production.
+            development. Eight live tools in production.
           </div>
         </div>
 
