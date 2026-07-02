@@ -458,7 +458,7 @@ function About() {
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
             The intersection of{" "}
             <span style={{ background: "linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              deep expertise
+              deep compliance expertise
             </span>{" "}
             and AI execution
           </h2>
