@@ -1,26 +1,30 @@
 # Gene Roth Advisory, LLC
 
-> AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.
+> AI-assisted compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes, led by a former FAA compliance director.
 
-## What we do
+Gene Roth Advisory, LLC is an Atlanta-based regulatory compliance and advisory firm founded by a former FAA Director of National External Operations, Policy and Compliance Programs. The site is a single page; the links below point to its main sections and resources.
 
-- Advisory & Consulting — fractional chief of staff, business development, DBE/ACDBE program advisory, Title VI and ADA / Section 504 compliance programs, and regulatory program design.
-- AI-Powered Compliance Tools — compliance audit agents, a RAG-based DBE/ACDBE narrative builder, certification deadline and IFR recertification tracking, and regulatory change detection.
-- Data & Analytics — airport operational performance, airline passenger experience, environmental compliance, and certification-rate analytics built on federal datasets (7M+ BTS flight records).
-- AI & Technology Services — custom compliance SaaS, agentic AI workflow design, RAG system architecture, and LLM integration.
+## Services
+
+- [Advisory & Consulting](https://generoth.com/#services): fractional chief of staff, business development, DBE/ACDBE program advisory, Title VI and ADA / Section 504 compliance programs, and regulatory program design.
+- [AI-Powered Compliance Tools](https://generoth.com/#services): compliance audit agents, a RAG-based DBE/ACDBE narrative builder, certification deadline and IFR recertification tracking, and regulatory change detection.
+- [Data & Analytics](https://generoth.com/#services): airport operational performance, airline passenger experience, environmental compliance, and certification-rate analytics built on federal datasets (7M+ BTS flight records).
+- [AI & Technology Services](https://generoth.com/#services): custom compliance SaaS, agentic AI workflow design, RAG system architecture, and LLM integration.
+
+## Portfolio
+
+- [Live AI tools](https://generoth.com/#portfolio): eight production compliance and analytics tools built on federal data.
 
 ## Key expertise
 
-- DBE certification
-- ACDBE certification
-- 49 CFR Part 26
-- 49 CFR Part 23
-- Title VI compliance
-- ADA / Section 504 accessibility
-- FAA airport compliance
-- AI compliance tools
-- RAG systems
+DBE certification, ACDBE certification, 49 CFR Part 26, 49 CFR Part 23, Title VI compliance, ADA / Section 504 accessibility, FAA airport compliance, AI compliance tools, and RAG systems.
 
 ## Contact
 
-gene@generoth.com · https://linkedin.com/in/generoth
+- [Email](mailto:gene@generoth.com): gene@generoth.com
+- [LinkedIn](https://linkedin.com/in/generoth): professional profile
+
+## Resources
+
+- [Homepage](https://generoth.com/): full site
+- [Sitemap](https://generoth.com/sitemap.xml): all indexed URLs
