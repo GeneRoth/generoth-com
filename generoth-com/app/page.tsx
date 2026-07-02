@@ -365,7 +365,7 @@ function Hero() {
 
         <p className="hero-fade hero-fade-1b"
           style={{ fontSize: "clamp(0.85rem, 1.6vw, 1rem)", color: "#94a3b8", fontWeight: 500, marginBottom: "1.25rem", letterSpacing: "0.01em" }}>
-          For airports, DBEs/ACDBEs, and engineering consultants.
+          For airports, DBEs/ACDBEs, consultants, concession and construction primes.
         </p>
 
         <h1 className="hero-fade hero-fade-2"

@@ -5,7 +5,7 @@ import "./globals.css";
 const GA_ID = "G-E8ZPZ0VT2T";
 
 const SITE_DESCRIPTION =
-  "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.";
+  "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.";
 
 const KNOWS_ABOUT = [
   "DBE certification",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     default: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
     template: "%s | Gene Roth Advisory, LLC",
   },
-  description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
+  description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
   authors: [{ name: "Gene Roth" }],
   creator: "Gene Roth Advisory, LLC",
   publisher: "Gene Roth Advisory, LLC",
@@ -83,14 +83,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Gene Roth Advisory, LLC",
     title: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
-    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
+    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
     // og:image comes from the generated app/opengraph-image.tsx (1200x630, with
     // its own alt); twitter:image inherits the same generated image below.
   },
   twitter: {
     card: "summary_large_image",
     title: "Gene Roth Advisory, LLC",
-    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, and engineering consultants — led by a former FAA compliance director.",
+    description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
   },
   robots: {
     index: true,
