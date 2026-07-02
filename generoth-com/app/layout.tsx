@@ -1,6 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+// Self-hosted via next/font (no render-blocking request to Google Fonts).
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const GA_ID = "G-E8ZPZ0VT2T";
 
@@ -63,7 +67,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://generoth.com"),
   title: {
-    default: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
+    default: "DBE/ACDBE & Federal Compliance Advisory | Gene Roth Advisory",
     template: "%s | Gene Roth Advisory, LLC",
   },
   description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
@@ -82,14 +86,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Gene Roth Advisory, LLC",
-    title: "Gene Roth Advisory, LLC | Federal Expertise · AI Execution",
+    title: "DBE/ACDBE & Federal Compliance Advisory | Gene Roth Advisory",
     description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
     // og:image comes from the generated app/opengraph-image.tsx (1200x630, with
     // its own alt); twitter:image inherits the same generated image below.
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gene Roth Advisory, LLC",
+    title: "DBE/ACDBE & Federal Compliance Advisory | Gene Roth Advisory",
     description: "AI-assisted regulatory compliance advisory for airports, DBEs/ACDBEs, consultants, and concession and construction primes — led by a former FAA compliance director.",
   },
   robots: {
@@ -115,15 +119,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             would leave these URL signals mismatched against the sitemap. */}
         <link rel="canonical" href="https://generoth.com/" />
         <meta property="og:url" content="https://generoth.com/" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
       </head>
-      <body style={{ fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif" }}>
+      <body className={inter.className}>
         {children}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
