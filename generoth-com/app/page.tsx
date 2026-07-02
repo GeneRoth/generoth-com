@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
   ChevronDown, ExternalLink, Mail, Link2,
   Shield, Brain, BarChart3, Database, Code2,
@@ -209,7 +209,7 @@ function Nav() {
         }}
       >
         {/* Logo */}
-        <motion.a href="#home" aria-label="Gene Roth Advisory home" style={{ display: "flex", alignItems: "center", textDecoration: "none" }} whileHover={{ scale: 1.02 }}>
+        <m.a href="#home" aria-label="Gene Roth Advisory home" style={{ display: "flex", alignItems: "center", textDecoration: "none" }} whileHover={{ scale: 1.02 }}>
           <Image
             src="/brand/logo-header-white.svg"
             alt="Gene Roth Advisory, LLC"
@@ -218,23 +218,23 @@ function Nav() {
             priority
             style={{ height: "40px", width: "auto" }}
           />
-        </motion.a>
+        </m.a>
 
         {/* Desktop links */}
         <div style={{ display: "flex", gap: "2.5rem", alignItems: "center" }} className="desktop-nav">
           {NAV_LINKS.map((link) => (
-            <motion.a key={link.href} href={link.href} whileHover={{ color: "#06b6d4" }}
+            <m.a key={link.href} href={link.href} whileHover={{ color: "#06b6d4" }}
               style={{ color: "#94a3b8", textDecoration: "none", fontSize: "0.875rem", fontWeight: 500, transition: "color 0.2s" }}>
               {link.label}
-            </motion.a>
+            </m.a>
           ))}
-          <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+          <m.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             style={{
               background: "#06b6d4", color: "#040d1a", padding: "0.5rem 1.25rem",
               borderRadius: "6px", textDecoration: "none", fontSize: "0.875rem", fontWeight: 700,
             }}>
             Hire Me
-          </motion.a>
+          </m.a>
         </div>
 
         {/* Mobile hamburger */}
@@ -255,7 +255,7 @@ function Nav() {
       {/* Mobile drawer */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -287,7 +287,7 @@ function Nav() {
               }}>
               Hire Me
             </a>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
 
@@ -343,7 +343,7 @@ function Hero() {
         filter: "blur(40px)", pointerEvents: "none", animation: "float 10s ease-in-out infinite reverse",
       }} />
 
-      <motion.div style={{ y, opacity, textAlign: "center", padding: "6rem 1.5rem 2rem", maxWidth: "900px", position: "relative", zIndex: 1, width: "100%" }}>
+      <m.div style={{ y, opacity, textAlign: "center", padding: "6rem 1.5rem 2rem", maxWidth: "900px", position: "relative", zIndex: 1, width: "100%" }}>
         {/*
           Above-the-fold content uses a pure CSS keyframe fade-in (see <style> below)
           instead of Framer Motion's initial/animate. The resting state is opacity:1,
@@ -385,7 +385,7 @@ function Hero() {
 
         <div className="hero-fade hero-fade-4"
           style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" as const, padding: "0 1rem" }}>
-          <motion.a href="#portfolio" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+          <m.a href="#portfolio" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             style={{
               background: "#06b6d4", color: "#040d1a", padding: "0.875rem 2rem", borderRadius: "8px",
               textDecoration: "none", fontWeight: 700, fontSize: "0.95rem",
@@ -393,8 +393,8 @@ function Hero() {
               width: "100%", maxWidth: "280px", justifyContent: "center",
             }}>
             View Live Projects <ArrowRight size={16} />
-          </motion.a>
-          <motion.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+          </m.a>
+          <m.a href="#contact" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             style={{
               background: "transparent", color: "#f1f5f9", padding: "0.875rem 2rem", borderRadius: "8px",
               textDecoration: "none", fontWeight: 700, fontSize: "0.95rem",
@@ -402,7 +402,7 @@ function Hero() {
               width: "100%", maxWidth: "280px", justifyContent: "center", display: "flex", alignItems: "center",
             }}>
             Book a Compliance Strategy Call
-          </motion.a>
+          </m.a>
         </div>
 
         <div className="hero-fade hero-fade-5"
@@ -414,7 +414,7 @@ function Hero() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </m.div>
 
       <style>{`
         /* Guaranteed-visible fade-in for above-the-fold hero content.
@@ -439,10 +439,10 @@ function Hero() {
         }
       `}</style>
 
-      <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
+      <m.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
         style={{ position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", color: "#64748b" }}>
         <ChevronDown size={20} />
-      </motion.div>
+      </m.div>
     </section>
   );
 }
@@ -453,7 +453,7 @@ function About() {
   return (
     <section id="about" style={{ padding: "6rem 1.5rem", maxWidth: "1200px", margin: "0 auto" }}>
       <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
-        <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+        <m.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>About</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.5rem", letterSpacing: "-0.02em" }}>
             The intersection of{" "}
@@ -477,12 +477,12 @@ function About() {
             hands-on technical execution. I build the AI tools, compliance dashboards, and data
             platforms that move work forward — not just advise on them.
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        <m.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
           style={{ display: "flex", flexDirection: "column" as const, gap: "1rem" }}>
           {ABOUT_CARDS.map((item, i) => (
-            <motion.div key={item.title}
+            <m.div key={item.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ x: 4, borderColor: "rgba(6,182,212,0.3)" }}
               style={{
@@ -500,9 +500,9 @@ function About() {
                 <div style={{ fontWeight: 700, fontSize: "0.9rem", marginBottom: "4px" }}>{item.title}</div>
                 <div style={{ color: "#64748b", fontSize: "0.8rem", lineHeight: 1.5 }}>{item.desc}</div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       <style>{`
@@ -525,7 +525,7 @@ function Services() {
       borderBottom: "1px solid rgba(255,255,255,0.06)",
     }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+        <m.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           style={{ textAlign: "center", marginBottom: "4rem" }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Services</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
@@ -538,11 +538,11 @@ function Services() {
             Four integrated practice areas — each informed by real federal experience
             and executed with production-grade AI and data engineering.
           </p>
-        </motion.div>
+        </m.div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
           {SERVICES.map((service, i) => (
-            <motion.div key={service.category}
+            <m.div key={service.category}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -4 }}
               style={{
@@ -567,7 +567,7 @@ function Services() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
@@ -581,7 +581,7 @@ function Portfolio() {
   return (
     <section id="portfolio" style={{ padding: "6rem 1.5rem" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+        <m.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           style={{ textAlign: "center", marginBottom: "4rem" }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Portfolio</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
@@ -595,11 +595,11 @@ function Portfolio() {
             Not mockups. Not demos. Real tools built on real data, solving real compliance
             and operational problems in aviation and government.
           </p>
-        </motion.div>
+        </m.div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
           {PORTFOLIO.map((project, i) => (
-            <motion.div key={project.id}
+            <m.div key={project.id}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6 }}
               style={{
@@ -637,12 +637,12 @@ function Portfolio() {
                     }}>{t}</span>
                   ))}
                 </div>
-                <motion.a href={project.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 4 }}
+                <m.a href={project.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 4 }}
                   style={{ display: "flex", alignItems: "center", gap: "6px", color: project.color, textDecoration: "none", fontSize: "0.8rem", fontWeight: 600, transition: "all 0.2s" }}>
                   View Live Project <ExternalLink size={13} />
-                </motion.a>
+                </m.a>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
@@ -660,7 +660,7 @@ function Contact() {
       borderTop: "1px solid rgba(255,255,255,0.06)",
     }}>
       <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <m.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#06b6d4", marginBottom: "1rem" }}>Contact</div>
           <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, lineHeight: 1.2, letterSpacing: "-0.02em", marginBottom: "1.5rem" }}>
             Let&apos;s build something{" "}
@@ -673,15 +673,15 @@ function Contact() {
             partner who understands both federal regulations and modern technology — let&apos;s talk.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" as const }}>
-            <motion.a href="mailto:gene@generoth.com" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+            <m.a href="mailto:gene@generoth.com" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
               style={{
                 background: "#06b6d4", color: "#040d1a", padding: "0.875rem 1.75rem", borderRadius: "8px",
                 textDecoration: "none", fontWeight: 700, fontSize: "0.9rem",
                 display: "flex", alignItems: "center", gap: "8px",
               }}>
               <Mail size={16} /> gene@generoth.com
-            </motion.a>
-            <motion.a href="https://linkedin.com/in/generoth" target="_blank" rel="noopener noreferrer"
+            </m.a>
+            <m.a href="https://linkedin.com/in/generoth" target="_blank" rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
               style={{
                 background: "transparent", color: "#f1f5f9", padding: "0.875rem 1.75rem", borderRadius: "8px",
@@ -690,9 +690,9 @@ function Contact() {
                 display: "flex", alignItems: "center", gap: "8px", transition: "all 0.2s",
               }}>
               <Link2 size={16} /> LinkedIn
-            </motion.a>
+            </m.a>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );
@@ -743,14 +743,16 @@ function Footer() {
 
 export default function Home() {
   return (
-    <main style={{ minHeight: "100vh" }}>
-      <Nav />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </main>
+    <LazyMotion features={domAnimation} strict>
+      <main style={{ minHeight: "100vh" }}>
+        <Nav />
+        <Hero />
+        <About />
+        <Services />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </main>
+    </LazyMotion>
   );
 }
