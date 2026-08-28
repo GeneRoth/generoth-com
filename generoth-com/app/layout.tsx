@@ -40,20 +40,29 @@ const JSON_LD = {
         addressRegion: "GA",
         addressCountry: "US",
       },
-      logo: "https://generoth.com/og-image-1200x630.png",
-      image: "https://generoth.com/og-image-1200x630.png",
+      // Same generated image Next.js uses for og:image/twitter:image below,
+      // so structured data and the social-share preview always match.
+      logo: "https://generoth.com/opengraph-image",
+      image: "https://generoth.com/opengraph-image",
       knowsAbout: KNOWS_ABOUT,
-      sameAs: ["https://linkedin.com/in/generoth"],
+      sameAs: ["https://www.linkedin.com/in/generoth/"],
     },
     {
       "@type": "Person",
       "@id": "https://generoth.com/#gene",
       name: "Gene Roth",
+      url: "https://generoth.com/",
       jobTitle: "Founder & Principal",
       worksFor: { "@id": "https://generoth.com/#organization" },
       description:
         "Former FAA Director of National External Operations, Policy & Compliance Programs.",
-      sameAs: ["https://linkedin.com/in/generoth"],
+      // Distinguishes this Gene Roth from other same-name entities search
+      // engines may surface. Intentionally does not mention fiction/books —
+      // this site stays fiction-free; the cross-link runs the other
+      // direction, from generothbooks.com's Person node.
+      disambiguatingDescription:
+        "Not the academic Gene Roth who co-edited the Routledge Companion to Human Resource Development.",
+      sameAs: ["https://www.linkedin.com/in/generoth/"],
       knowsAbout: KNOWS_ABOUT,
     },
   ],
