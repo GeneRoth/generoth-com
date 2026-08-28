@@ -56,12 +56,14 @@ const JSON_LD = {
       worksFor: { "@id": "https://generoth.com/#organization" },
       description:
         "Former FAA Director of National External Operations, Policy & Compliance Programs.",
-      // Distinguishes this Gene Roth from other same-name entities search
-      // engines may surface. Intentionally does not mention fiction/books —
-      // this site stays fiction-free; the cross-link runs the other
-      // direction, from generothbooks.com's Person node.
+      // Positive facts only — no negation, no other person's name or work.
+      // Entity extraction doesn't reliably parse negation, so naming another
+      // "Gene Roth" here would risk associating that person's work with this
+      // entity instead of separating it. Intentionally does not mention
+      // fiction/books — this site stays fiction-free; the cross-link runs the
+      // other direction, from generothbooks.com's Person node.
       disambiguatingDescription:
-        "Not the academic Gene Roth who co-edited the Routledge Companion to Human Resource Development.",
+        "Based in Atlanta, Georgia. Founder and Principal of Gene Roth Advisory, LLC, and former FAA Director of National External Operations, Policy & Compliance Programs.",
       sameAs: ["https://www.linkedin.com/in/generoth/"],
       knowsAbout: KNOWS_ABOUT,
     },
